@@ -16,5 +16,7 @@ function paymentcheck() {
 	var val = document.getElementById("status").value;
 	if (val=="finished") {
 		document.getElementById("pay-confirm").classList.remove("hide");
+	} else {
+		window.location.href = 'index2.html';
 	}
 }
