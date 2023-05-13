@@ -327,7 +327,7 @@ input {
 }
 
 .popup-content p {
-	font-size: calc(1vw + 6px);
+	font-size: calc(1vw + 8px);
 	width: 100%;
 	min-width: 200px;
 	height: fit-content;
