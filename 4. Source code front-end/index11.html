@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style11.css">
+	<script src="script11.js"></script>
+	<meta charset="UTF-8">
+	<title>Mật khẩu - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="navigate">
+		<div class="nav-btn" id="booking" onclick="window.location.href = 'index2.html'">
+			<div class="nav-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p class="nav-name">Đặt bàn</p>
+		</div>
+		<div class="nav-btn" id="history" onclick="window.location.href = 'index4.html'">
+			<div class="nav-icon">
+				<div class="bg">
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+			<p class="nav-name">Lịch sử</p>
+		</div>
+		<div class="nav-btn" id="customer" onclick="window.location.href = 'index5.html'">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="elipse"></div>
+			</div>
+			<p class="nav-name">Khách hàng</p>
+		</div>
+		<div class="nav-btn" id="menu" onclick="window.location.href = 'index7.html'">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="half-round"></div>
+				<div class="line"></div>
+			</div>
+			<p class="nav-name">Menu</p>
+		</div>
+		<div class="nav-btn" id="employee" onclick="window.location.href = 'index9.html'">
+			<div class="nav-icon">
+				<div class="border">
+					<div class="round"></div>
+					<div class="round-rtg"></div>
+				</div>
+			</div>
+			<p class="nav-name">Nhân viên</p>
+		</div>
+		<div class="nav-btn" id="password">
+			<div class="nav-icon">
+				<div class="elipse"></div>
+				<div class="square"></div>
+			</div>
+			<p class="nav-name">Mật khẩu</p>
+		</div>
+	</div>
+	<div class="main-content">
+		<p id="tag">Đổi mật khẩu</p>
+		<div class="form-contain">
+			<div class="old-pw">
+				<p class="input-tag">Mật khẩu cũ</p>
+				<input type="text" name="old-pass" id="old-pass">
+			</div>
+			<div class="new-pw">
+				<p class="input-tag">Mật khẩu mới</p>
+				<input type="text" name="new-pass" id="new-pass">
+			</div>
+		</div>
+		<div class="btn-container">
+			<button id="cancel" onclick="cancel()">
+				<p>Hủy</p>
+			</button>
+			<button id="finish" onclick="window.location.href = 'index11.html'">
+				<p>Lưu</p>
+			</button>
+		</div>
+	</div>
+	<div class="popup hide" id="cancel-click">
+		<div class="popup-content">
+			<p>Hủy tạo mới mật khẩu?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('cancel-click')">Quay lại</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Đồng ý</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

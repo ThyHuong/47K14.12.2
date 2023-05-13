@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style4.css">
+	<meta charset="UTF-8">
+	<title>Lịch sử - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="navigate">
+		<div class="nav-btn" id="booking" onclick="window.location.href = 'index2.html'">
+			<div class="nav-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p class="nav-name">Đặt bàn</p>
+		</div>
+		<div class="nav-btn" id="history">
+			<div class="nav-icon">
+				<div class="bg">
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+			<p class="nav-name">Lịch sử</p>
+		</div>
+		<div class="nav-btn" id="customer" onclick="window.location.href = 'index5.html'">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="elipse"></div>
+			</div>
+			<p class="nav-name">Khách hàng</p>
+		</div>
+		<div class="nav-btn" id="menu" onclick="window.location.href = 'index7.html'">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="half-round"></div>
+				<div class="line"></div>
+			</div>
+			<p class="nav-name">Menu</p>
+		</div>
+		<div class="nav-btn" id="employee" onclick="window.location.href = 'index9.html'">
+			<div class="nav-icon">
+				<div class="border">
+					<div class="round"></div>
+					<div class="round-rtg"></div>
+				</div>
+			</div>
+			<p class="nav-name">Nhân viên</p>
+		</div>
+		<div class="nav-btn" id="password" onclick="window.location.href = 'index11.html'">
+			<div class="nav-icon">
+				<div class="elipse"></div>
+				<div class="square"></div>
+			</div>
+			<p class="nav-name">Mật khẩu</p>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="search">
+			<input type="text" name="htr-seach" id="htr-search">
+			<div class="search-icon">
+				<div class="round"></div>
+				<div class="rtg"></div>
+			</div>
+		</div>
+		<table cellspacing="0">
+			<thead>
+				<th class="stt">STT</th>
+				<th class="madon">Mã đơn</th>
+				<th class="tennv">Tên nhân viên</th>
+				<th class="tenkh">Tên khách hàng</th>
+			</thead>
+			<tbody>
+				<tr onclick="window.location.href = 'index3-2.html'">
+					<td class="stt">1</td>
+					<td class="madon">VIP_1604_0740_04</td>
+					<td class="tennv">Đỗ Thị Thy Hương</td>
+					<td class="tenkh">Nguyễn Đỗ Ánh Như</td>
+				</tr>
+				<tr onclick="window.location.href = 'index3-2.html'">
+					<td class="stt">2</td>
+					<td class="madon">BT_1604_0930_03,07</td>
+					<td class="tennv">Nguyễn Đỗ Ánh Như</td>
+					<td class="tenkh">Đỗ Thị Thy Hương</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

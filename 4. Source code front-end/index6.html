@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style6.css">
+	<script src="script6.js"></script>
+	<meta charset="UTF-8">
+	<title>Khách hàng - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="main-content">
+		<p id="tag">Thông tin khách hàng</p>
+		<div class="form-contain">
+			<div class="name">
+				<p class="input-tag">Họ và tên</p>
+				<input type="text" name="cust-name" id="cust-name">
+			</div>
+			<div class="bdate">
+				<p class="input-tag">Ngày sinh</p>
+				<input type="date" name="cust-bdate" id="cust-bdate">
+			</div>
+			<div class="phone">
+				<p class="input-tag">Số điện thoại</p>
+				<input type="tel" maxlength="10" name="cust-phone" id="cust-phone">
+			</div>
+			<div class="usable-point">
+				<p class="input-tag">Điểm tích lũy</p>
+				<input type="number" name="usable-point" id="usable-point" value="0" readonly>
+			</div>
+			<div class="total-point">
+				<p class="input-tag">Mức độ thân thiết</p>
+				<input type="number" name="total-point" id="total-point" value="0" readonly>
+			</div>
+		</div>
+		<div class="btn-container">
+			<button id="cancel" onclick="cancel()">
+				<p>Hủy</p>
+			</button>
+			<button id="finish" onclick="window.location.href = 'index5.html'">
+				<p>Lưu</p>
+			</button>
+		</div>
+	</div>
+	<div class="popup hide" id="cancel-click">
+		<div class="popup-content">
+			<p>Hủy tạo mới khách hàng?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('cancel-click')">Quay lại</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Đồng ý</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

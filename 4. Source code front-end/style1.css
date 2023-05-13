@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Lexend, monospace;
+	font-size: 3vh;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #FFFFFF;
+}
+
+#upper-part {
+	height: 50%;
+	width: 100%;
+	background-image: url(img/background.jpg);
+	background-size: calc(200vh);
+	background-position: -100px 0;
+	overflow: hidden;
+}
+
+#logo {
+	height: 250px;
+	width: 200px;
+	background-color: #FFFFFF;
+	position: relative;
+	top: calc(100% - 135px);
+	left: calc(50% - 100px);
+	border-radius: 200px 200px 0 0;
+}
+
+#logo img {
+	width: 100%;
+}
+
+#login-form {
+	height: 30%;
+	width: 80%;
+	max-width: 700px;
+	position: relative;
+	top: 10%;
+	margin: auto;
+}
+
+input {
+	width: 100%;
+	height: 60px;
+	border: 5px solid #FFD12B;
+	margin: 0 0 40px 0;
+	padding: 10px;
+}
+
+button {
+	height: 60px;
+	width: 50%;
+	background-color: #FFD12B;
+	text-transform: uppercase;
+	position: relative;
+	left: 25%;
+}
+
+.popup {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+}
+
+.hide {
+	display: none;
+}
+
+#popup-content {
+	width: 300px;
+	height: 30%;
+	background-color: #FFFFFF;
+	border: 5px solid black;
+	position: relative;
+	top: 35%;
+	left: calc(50% - 150px);
+	padding-top: 4.5%;
+}
+
+#popup-content p {
+	font-size: 2vh;
+	width: 100%;
+	height: 40%;
+	vertical-align: center;
+	text-align: center;
+}
+
+#popup-content button {
+	height: 30%;
+	width: 50%;
+	text-transform: none;
+}
+
+#popup-content button p {
+	font-size: 2vh;
+}

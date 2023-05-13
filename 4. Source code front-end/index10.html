@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style10.css">
+	<script src="script10.js"></script>
+	<meta charset="UTF-8">
+	<title>Nhân viên - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="main-content">
+		<p id="tag">Thông tin nhân viên</p>
+		<div class="form-contain">
+			<div class="name">
+				<p class="input-tag">Họ và tên</p>
+				<input type="text" name="emp-name" id="emp-name">
+			</div>
+			<div class="account">
+				<p class="input-tag">Tên đăng nhập</p>
+				<input type="text" name="emp-acc" id="emp-acc">
+			</div>
+			<div class="phone">
+				<p class="input-tag">Số điện thoại</p>
+				<input type="tel" maxlength="10" name="emp-phone" id="emp-phone">
+			</div>
+			<div class="id">
+				<p class="input-tag">CCCD</p>
+				<input type="tel" name="emp-id" id="emp-id">
+			</div>
+			<div class="dpm">
+				<p class="input-tag">Chức vụ</p>
+				<select class="emp-dpm">
+					<option value="mkt">Marketing</option>
+					<option value="recep">Lễ Tân</option>
+					<option value="wait">Phục vụ</option>
+				</select>
+			</div>
+		</div>
+		<div class="btn-container">
+			<button id="cancel" onclick="cancel()">
+				<p>Hủy</p>
+			</button>
+			<button id="finish" onclick="window.location.href = 'index9.html'">
+				<p>Lưu</p>
+			</button>
+		</div>
+	</div>
+	<div class="popup hide" id="cancel-click">
+		<div class="popup-content">
+			<p>Hủy tạo mới nhân viên?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('cancel-click')">Quay lại</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Đồng ý</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

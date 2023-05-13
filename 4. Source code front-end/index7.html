@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style7.css">
+	<script src="script7.js"></script>
+	<meta charset="UTF-8">
+	<title>Menu - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="navigate">
+		<div class="nav-btn" id="booking" onclick="window.location.href = 'index2.html'">
+			<div class="nav-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p class="nav-name">Đặt bàn</p>
+		</div>
+		<div class="nav-btn" id="history" onclick="window.location.href = 'index4.html'">
+			<div class="nav-icon">
+				<div class="bg">
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="line"></div>
+				</div>
+			</div>
+			<p class="nav-name">Lịch sử</p>
+		</div>
+		<div class="nav-btn" id="customer" onclick="window.location.href = 'index5.html'">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="elipse"></div>
+			</div>
+			<p class="nav-name">Khách hàng</p>
+		</div>
+		<div class="nav-btn" id="menu">
+			<div class="nav-icon">
+				<div class="round"></div>
+				<div class="half-round"></div>
+				<div class="line"></div>
+			</div>
+			<p class="nav-name">Menu</p>
+		</div>
+		<div class="nav-btn" id="employee" onclick="window.location.href = 'index9.html'">
+			<div class="nav-icon">
+				<div class="border">
+					<div class="round"></div>
+					<div class="round-rtg"></div>
+				</div>
+			</div>
+			<p class="nav-name">Nhân viên</p>
+		</div>
+		<div class="nav-btn" id="password" onclick="window.location.href = 'index11.html'">
+			<div class="nav-icon">
+				<div class="elipse"></div>
+				<div class="square"></div>
+			</div>
+			<p class="nav-name">Mật khẩu</p>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="search">
+			<input type="text" name="dish-seach" id="dish-search">
+			<div class="search-icon">
+				<div class="round"></div>
+				<div class="rtg"></div>
+			</div>
+		</div>
+		<div class="add-new">
+			<button id="add-new-btn" onclick="window.location.href = 'index8.html'">Tạo mới</button>
+		</div>
+		<div class="order-info container">
+			<div class="list-of-dishes">
+				<div class="dish" id="dish01">
+					<img class="dish-img" src="img/Menu/01-SaladCamTuoiCaNgu.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Salad Cam Tươi Cá Ngừ</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">189.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish02">
+					<img class="dish-img" src="img/Menu/02-GoiThaiHaiSan.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Gỏi Thái Hải Sản</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">145.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish03">
+					<img class="dish-img" src="img/Menu/03-ChaGioSundre.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Chả Giò Sundre</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">189.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish04">
+					<img class="dish-img" src="img/Menu/04-SashimiSundreTongHop.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Sashimi Sundre Tổng Hợp</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">349.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish05">
+					<img class="dish-img" src="img/Menu/05-XucXichNaiNuong.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Xúc Xích Nai Nướng</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">189.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish06">
+					<img class="dish-img" src="img/Menu/06-SuonCuuSotDauTay.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Sườn Cừu Sốt Dâu Tây</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">510.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish07">
+					<img class="dish-img" src="img/Menu/07-SaladRongNhoHaiSan.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Salad Rong Nho Hải Sản</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">169.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish08">
+					<img class="dish-img" src="img/Menu/08-KhayNuongHSNguVi.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Khay Nướng HS Ngũ Vị</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">390.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish09" onclick="window.location.href = 'index8-2.html'">
+					<img class="dish-img" src="img/Menu/09-BoMotNangChamMuoiKienVang.jpg" alt="ảnh minh họa">
+					<div class="dish-info">
+						<p class="dish-name">Bò Một Nắng Chấm Muối Kiến Vàng</p>
+						<p class="dish-price">229.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish10">
+					<img class="dish-img" src="img/Menu/10-BoMySotTieuXanh.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Bò Mỹ Sốt Tiêu Xanh</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">319.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish11">
+					<img class="dish-img" src="img/Menu/11-CaHoiSotChanhDay.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Hồi Sốt Chanh Dây</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">249.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish12">
+					<img class="dish-img" src="img/Menu/12-CaMuHapXiDau.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Mú Hấp Xì Dầu</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">630.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish13">
+					<img class="dish-img" src="img/Menu/13-CaBopOmDua.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Bớp Om Dưa</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">220.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish14">
+					<img class="dish-img" src="img/Menu/14-CaDiaKhoTieuXanh.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Dìa Kho Tiêu Xanh</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">580.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish15">
+					<img class="dish-img" src="img/Menu/15-CaHoiNuongSaTe.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Hồi Nướng Sa Tế</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">259.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish16">
+					<img class="dish-img" src="img/Menu/16-CaBaTrauNuongMuoiTieuXanh.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Bả Trầu Nướng Muối Tiêu Xanh</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">180.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish17">
+					<img class="dish-img" src="img/Menu/17-CaDiaNauKhe.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cá Dìa Nấu Khế</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">580.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish18">
+					<img class="dish-img" src="img/Menu/18-BachTuocNuongSaTe.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Bạch Tuộc Nướng Sa Tế</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">219.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish19">
+					<img class="dish-img" src="img/Menu/19-ComChienCaMan.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Cơm Chiên Cá Mặn</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">139.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+				<div class="dish" id="dish20">
+					<img class="dish-img" src="img/Menu/20-ComboNuongThuyenDaDang.jpg" alt="ảnh minh họa" onclick="window.location.href = 'index8-2.html'">
+					<div class="dish-info">
+						<p class="dish-name" onclick="window.location.href = 'index8-2.html'">Combo Nướng Thuyền Đa Dạng</p>
+						<p class="dish-price" onclick="window.location.href = 'index8-2.html'">889.000</p>
+						<img class="delete-icon" src="img/trashbin-icon.png" alt="" onclick="deletefunc()">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup hide" id="delete-click">
+		<div class="popup-content">
+			<p>Chắc chắn muốn xóa món ăn này?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('delete-click')">Hủy</button>
+				<button class="popup-agree" onclick="window.location.href = 'index7.html'">Xóa</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

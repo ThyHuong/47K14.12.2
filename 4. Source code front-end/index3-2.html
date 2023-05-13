@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style3.css">
+	<script src="script3.js"></script>
+	<meta charset="UTF-8">
+	<title>Đặt bàn - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="main-content">
+		<div class="cust-contain">
+			<p class="info-tag">Thông tin khách hàng</p>
+			<div class="cust-info container">
+				<div class="p-number">
+					<p class="input-tag">Số điện thoại</p>
+					<input type="tel" required id="cust-num" name="cust-num" onchange="custcheck()" value="0134964369">
+				</div>
+				<div class="name">
+					<p class="input-tag">Họ và tên</p>
+					<input type="text" id="cust-name" name="cust-name" value="Đỗ Thị Thy Hương"readonly>
+				</div>
+			</div>
+			<div class="emp-info">
+				<p class="input-tag">Tên nhân viên</p>
+				<input type="text" id="emp-name" name="emp-name" value="Nguyễn Đỗ Ánh Như" readonly>
+			</div>
+		</div>
+		<div class="book-contain">
+			<p class="info-tag">Thông tin đặt bàn</p>
+			<div class="book-info container">
+				<div class="first-block">
+					<p class="input-tag">Số bàn</p>
+					<input type="text" id="tbl-nums" name="tbl-nums" value="04, 03">
+				</div>
+				<div class="sec-block">
+					<p class="input-tag">Số người</p>
+					<input type="number" id="pp-num" name="pp-num" value="10">
+				</div>
+				<div class="third-block">
+					<p class="input-tag">Thời gian đặt</p>
+					<input type="datetime-local" id="book-time" name="book-time" value ="2023-05-15T09:30"readonly>
+					<p class="input-tag">Thời gian đến</p>
+					<input type="datetime-local" id="arrive-time" name="arrive-time" value="2023-05-17T19:00">
+					<p class="input-tag">Trạng thái</p>
+					<select name="status" id="status">
+						<option value="not-yet" selected>Khách chưa đến</option>
+						<option value="arrived">Khách đã đến</option>
+						<!-- <option value="late">Quá giờ</option> -->
+						<option value="canceled">Đã hủy</option>
+						<option value="finished">Đã thanh toán</option>
+					</select>
+				</div>
+				<div class="fourth-block">
+					<p class="input-tag">Ghi chú</p>
+					<textarea id="cust-note" name="cust-note" maxlength="200" wrap></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="order-contain">
+			<p class="info-tag">Thông tin đặt món</p>
+			<div class="order-info container">
+				<div class="search">
+					<input type="text" name="dish-search" id="dish-search">
+					<div class="search-icon">
+						<div class="round"></div>
+						<div class="rtg"></div>
+					</div>
+				</div>
+				<div class="list-of-dishes">
+					<div class="dish" id="dish01">
+						<img class="dish-img" src="img/Menu/01-SaladCamTuoiCaNgu.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Salad Cam Tươi Cá Ngừ</p>
+							<p class="dish-price">189.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish01-count" id="dish01-count" min="0" value="1">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish02">
+						<img class="dish-img" src="img/Menu/02-GoiThaiHaiSan.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Gỏi Thái Hải Sản</p>
+							<p class="dish-price">145.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish02-count" id="dish02-count" min="0" value="1">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish03">
+						<img class="dish-img" src="img/Menu/03-ChaGioSundre.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Chả Giò Sundre</p>
+							<p class="dish-price">189.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish03-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish04">
+						<img class="dish-img" src="img/Menu/04-SashimiSundreTongHop.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Sashimi Sundre Tổng Hợp</p>
+							<p class="dish-price">349.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish04-count" id="dish01-count" min="0" value="1">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish05">
+						<img class="dish-img" src="img/Menu/05-XucXichNaiNuong.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Xúc Xích Nai Nướng</p>
+							<p class="dish-price">189.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish05-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish06">
+						<img class="dish-img" src="img/Menu/06-SuonCuuSotDauTay.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Sườn Cừu Sốt Dâu Tây</p>
+							<p class="dish-price">510.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish06-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish07">
+						<img class="dish-img" src="img/Menu/07-SaladRongNhoHaiSan.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Salad Rong Nho Hải Sản</p>
+							<p class="dish-price">169.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish07-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish08">
+						<img class="dish-img" src="img/Menu/08-KhayNuongHSNguVi.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Khay Nướng HS Ngũ Vị</p>
+							<p class="dish-price">390.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish08-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish09">
+						<img class="dish-img" src="img/Menu/09-BoMotNangChamMuoiKienVang.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Bò Một Nắng Chấm Muối Kiến Vàng</p>
+							<p class="dish-price">229.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish09-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish10">
+						<img class="dish-img" src="img/Menu/10-BoMySotTieuXanh.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Bò Mỹ Sốt Tiêu Xanh</p>
+							<p class="dish-price">319.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish10-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish11">
+						<img class="dish-img" src="img/Menu/11-CaHoiSotChanhDay.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Hồi Sốt Chanh Dây</p>
+							<p class="dish-price">249.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish11-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish12">
+						<img class="dish-img" src="img/Menu/12-CaMuHapXiDau.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Mú Hấp Xì Dầu</p>
+							<p class="dish-price">630.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish12-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish13">
+						<img class="dish-img" src="img/Menu/13-CaBopOmDua.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Bớp Om Dưa</p>
+							<p class="dish-price">220.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish13-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish14">
+						<img class="dish-img" src="img/Menu/14-CaDiaKhoTieuXanh.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Dìa Kho Tiêu Xanh</p>
+							<p class="dish-price">580.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish14-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish15">
+						<img class="dish-img" src="img/Menu/15-CaHoiNuongSaTe.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Hồi Nướng Sa Tế</p>
+							<p class="dish-price">259.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish15-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish16">
+						<img class="dish-img" src="img/Menu/16-CaBaTrauNuongMuoiTieuXanh.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Bả Trầu Nướng Muối Tiêu Xanh</p>
+							<p class="dish-price">180.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish16-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish17">
+						<img class="dish-img" src="img/Menu/17-CaDiaNauKhe.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cá Dìa Nấu Khế</p>
+							<p class="dish-price">580.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish17-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish18">
+						<img class="dish-img" src="img/Menu/18-BachTuocNuongSaTe.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Bạch Tuộc Nướng Sa Tế</p>
+							<p class="dish-price">219.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish18-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish19">
+						<img class="dish-img" src="img/Menu/19-ComChienCaMan.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Cơm Chiên Cá Mặn</p>
+							<p class="dish-price">139.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish19-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dish" id="dish20">
+						<img class="dish-img" src="img/Menu/20-ComboNuongThuyenDaDang.jpg" alt="ảnh minh họa">
+						<div class="dish-info">
+							<p class="dish-name">Combo Nướng Thuyền Đa Dạng</p>
+							<p class="dish-price">889.000</p>
+							<div class="dish-count">
+								<p>SL:</p>
+								<div class="minus">
+									<div class="icon">
+										<div class="horizontal"></div>
+									</div>
+								</div>
+								<input type="number" name="dish20-count" id="dish01-count" min="0" value="0">
+								<div class="plus">
+									<div class="icon">
+										<div class="horizontal"></div>
+										<div class="vertical"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="total-container">
+					<p class="input-tag">Tổng cộng</p>
+					<input type="number" name="total" id="total" value="683.000"readonly>
+				</div>
+			</div>
+		</div>
+		<div class="pay-contain">
+			<p class="info-tag">Thông tin thanh toán</p>
+			<div class="pay-info container">
+				<div class="discount-container">
+					<p class="input-tag">Khuyến mãi</p>
+					<input type="number" max="1" min="0" step="0.1" name="disc" id="discount">
+				</div>
+				<div class="pre-paid-container">
+					<p class="input-tag">Tiền cọc</p>
+					<input type="number" min="200000" step="10000" name="pre-paid" id="pre-paid" value="200.000" readonly>
+				</div>
+				<div class="have-to-pay-container">
+					<p class="input-tag">Còn lại</p>
+					<input type="number" name="have-to-pay" id="have-to-pay" readonly value="483.000">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="btn-container">
+		<button id="cancel" onclick="cancel()">
+			<p>Hủy</p>
+		</button>
+		<button id="finish" onclick="paymentcheck()">
+			<p>Lưu</p>
+		</button>
+	</div>
+	<div class="popup hide" id="miss-cust">
+		<div class="popup-content">
+			<p>Chưa có thông tin khách hàng, tạo mới?</p>
+			<div class="popup-btn-container">
+				<button class="popup-cancel" onclick="window.location.href ='index2.html'">Hủy</button>
+				<button class="popup-agree" onclick="window.location.href = 'index6.html'">Tạo mới</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup hide" id="cancel-click">
+		<div class="popup-content">
+			<p>Hủy cập nhật đơn đặt bàn?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('cancel-click')">Quay lại</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Đồng ý</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup hide" id="pay-confirm">
+		<div class="popup-content">
+			<p>Xác nhận thanh toán?</p>
+			<div class="popup-btn-container">
+				<button class="popup-cancel" onclick="closepopup()">Không</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Có</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

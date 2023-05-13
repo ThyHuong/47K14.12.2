@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style8.css">
+	<script src="script8.js"></script>
+	<meta charset="UTF-8">
+	<title>Menu - Sundre Restaurant</title>
+</head>
+<body>
+	<header>
+		<p>Sundre</p>
+		<img src="img/logo.png" alt="logo of the restaurant">
+	</header>
+	<div class="main-content">
+		<p id="tag">Thông tin món ăn</p>
+		<div class="form-contain">
+			<div class="name">
+				<p class="input-tag">Tên món ăn</p>
+				<input type="text" name="dish-name" id="dish-name" value="Salad Cam Tươi Cá Ngừ">
+			</div>
+			<div class="price">
+				<p class="input-tag">Giá tiền</p>
+				<input type="number" step="1000" name="dish-price" id="dish-price" value="189000">
+			</div>
+			<div class="image">
+				<p class="input-tag">Hình ảnh</p>
+				<div>
+					<img id="img-preview" src="img/Menu/01-SaladCamTuoiCaNgu.jpg"> 
+					<input type="file" accept="image/*" id="img-input" name="img-input" onchange="addImage()">
+				</div>
+			</div>
+		</div>
+		<div class="btn-container">
+			<button id="cancel" onclick="cancel()">
+				<p>Hủy</p>
+			</button>
+			<button id="finish" onclick="window.location.href = 'index7.html'">
+				<p>Lưu</p>
+			</button>
+		</div>
+	</div>
+	<div class="popup hide" id="cancel-click">
+		<div class="popup-content">
+			<p>Hủy cập nhật món ăn?</p>
+			<div class="popup-btn-container">
+				<button class="popup-close" onclick="closepopup('cancel-click')">Quay lại</button>
+				<button class="popup-agree" onclick="window.location.href = 'index2.html'">Đồng ý</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
