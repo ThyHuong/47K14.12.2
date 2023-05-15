@@ -12,6 +12,11 @@ function custcheck() {
 	}
 }
 
+function deletephone() {
+	document.getElementById("cust-num").value="";
+	closepopup("miss-cust");
+}
+
 function paymentcheck() {
 	var val = document.getElementById("status").value;
 	if (val=="finished") {
